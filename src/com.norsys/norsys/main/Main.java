@@ -1,6 +1,6 @@
 package norsys.main;
 
-import common.math.*;
+import common.math.Calculatrice;
 import java.lang.reflect.*;
 
 public class Main{
@@ -19,7 +19,7 @@ public class Main{
 			double carre = (double) method.invoke(calculatrice, 2.0);
 			System.out.println("carre  = " + carre);
 
-		}catch(Exception e){
+		}catch(NoSuchMethodException | IllegalAccessException | InvocationTargetException e){
 			// NoSuchMethodException, IllegalAccessException, InvocationTargetException
 			System.out.println("l'utilisation de la methode carre a foirée  ... andouille !");
 			System.out.println(e);
