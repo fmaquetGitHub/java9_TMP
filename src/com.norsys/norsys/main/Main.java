@@ -22,7 +22,7 @@ public class Main{
 		}catch(Exception e){
 			// NoSuchMethodException, IllegalAccessException, InvocationTargetException
 			System.out.println("l'utilisation de la methode carre a foirée  ... andouille !");
-
+			System.out.println(e);
 		}
 
 	}
