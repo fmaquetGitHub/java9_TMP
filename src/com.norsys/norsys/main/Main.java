@@ -1,29 +1,19 @@
 package norsys.main;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import common.math.Calculatrice;
-import java.lang.reflect.*;
 
 public class Main{
 
+	private final static Logger logger = LoggerFactory.getLogger(Main.class); 
+
 	public static void main(String args[]){
+		logger.info("Welcome to the HelloWorld example of SLF4J");
+
 		String helloWorld = new String("Hello World ! ");
 		Calculatrice calculatrice = new Calculatrice();
-
-		// Appel de la methode public aireCercle
-		System.out.println(helloWorld + calculatrice.aireCercle(1.5));
-
-		try{	
-			// Tentative d'appel de la methode privee carre
-			Method method = calculatrice.getClass().getDeclaredMethod("carre", Double.TYPE);
-			method.setAccessible(true);
-			double carre = (double) method.invoke(calculatrice, 2.0);
-			System.out.println("carre  = " + carre);
-
-		}catch(NoSuchMethodException | IllegalAccessException | InvocationTargetException e){
-			// NoSuchMethodException, IllegalAccessException, InvocationTargetException
-			System.out.println("l'utilisation de la methode carre a foirée  ... andouille !");
-			System.out.println(e);
-		}
+		System.out.println(helloWorld + calculatrice.somme(1,1));
 
 	}
 }

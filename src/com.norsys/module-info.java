@@ -1,4 +1,5 @@
 module com.norsys {
-  requires org.common;
+  requires calculatrice;
+  requires slf4j.api;
 }
 
