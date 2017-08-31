@@ -1,4 +1,4 @@
-module com.norsys {
+module com.autreboite {
   requires org.common.norsys;
 }
 
